@@ -10,12 +10,27 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
   </head>
 
   <body>
     <header>(header)</header>
 
-    <main>(summarizer)</main>
+    <main class="d-flex flex-column align-items-center">
+      <div class="d-flex">
+        <input
+          class="border border-black rounded-start ps-3 fs-3"
+          style="width: 450px"
+          placeholder="Paste a YouTube link to summarize!"
+        />
+        <button class="border border-black border-start-0 bg-white rounded-end">
+          <i class="bi bi-search fs-3"></i>
+        </button>
+      </div>
+    </main>
 
     <footer>(footer)</footer>
 
