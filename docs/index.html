@@ -10,12 +10,58 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
   </head>
 
   <body>
     <nav>(Navbar)</nav>
 
-    <main>(summarizer)</main>
+    <main class="d-flex flex-column align-items-center">
+      <form class="d-flex">
+        <input
+          class="border border-black rounded-start ps-3 fs-3"
+          style="width: 450px"
+          placeholder="Paste a YouTube link to summarize!"
+        />
+        <button class="border border-black border-start-0 bg-white rounded-end">
+          <i class="bi bi-search fs-3"></i>
+        </button>
+      </form>
+
+      <div class="mt-5">
+        <div class="d-flex flex-column">
+          <div
+            style="width: 300px; height: 190px"
+            class="border border-black rounded d-flex align-items-center justify-content-center"
+          >
+            <i style="font-size: 6rem" class="bi bi-camera-video-fill"></i>
+          </div>
+        </div>
+        <div class="d-flex">
+          <p class="flex-grow-1">Top 10 cities in the world</p>
+          <p>4:03</p>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <h3>Summary:</h3>
+        <p style="width: 660px" class="border border-black py-3 px-5">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus
+          lorem, sagittis tincidunt placerat eu, ultrices eu nulla. Aenean
+          lacinia feugiat ante, ut condimentum nunc interdum id. Nunc volutpat
+          volutpat pellentesque. Aliquam volutpat dignissim nunc, quis consequat
+          risus porta vel. Vestibulum ante ipsum primis in faucibus orci luctus
+          et ultrices posuere cubilia curae; Quisque eu felis et ipsum bibendum
+          consectetur in id erat. Quisque aliquet felis lacus, nec venenatis
+          felis ornare vitae. Vivamus vel lectus vulputate, auctor ante eu,
+          fermentum dolor. Morbi eros enim, tempor vel arcu ac, convallis
+          vulputate purus.
+        </p>
+      </div>
+    </main>
 
     <footer>
       <div class="container my-2">
