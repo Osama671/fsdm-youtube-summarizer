@@ -1,19 +1,5 @@
-*
-{
-  margin:none;
-  padding:none;
+* {
+  margin: none;
+  padding: none;
   box-sizing: border-box;
 }
-
-.demo-2{
-  color:black !important;
-}
-
-.demo
-{
-  color:white;
-}
-
-
-
-
