@@ -22,16 +22,17 @@
 
     <main class="container">
       <form class="row justify-content-center">
-        <div class="url-input col-sm-10 col-md-8 col-lg-6 d-flex">
-          <input
-            class="flex-grow-1 border border-black rounded-start ps-3"
-            placeholder="Paste a YouTube link to summarize!"
-          />
-          <button
-            class="border border-black border-start-0 bg-white rounded-end"
-          >
-            <i class="bi bi-search"></i>
-          </button>
+        <div class="col-sm-10 col-md-8 col-lg-6 d-flex">
+          <div class="url-input input-group">
+            <input
+              class="form-control flex-grow-1 border-black"
+              placeholder="Paste a YouTube link to summarize!"
+              aria-describedby="search-button"
+            />
+            <button class="input-group-text border-black bg-white">
+              <i class="bi bi-search" id="search-button"></i>
+            </button>
+          </div>
         </div>
       </form>
 

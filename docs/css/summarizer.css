@@ -1,19 +1,21 @@
-.url-input {
-  font-size: 1.4rem;
+.url-input > * {
+  font-size: 1.2rem;
 }
 
-@media screen and (max-width: 576px) {
-  .url-input {
+@media screen and (max-width: 400px) {
+  .url-input > * {
     font-size: 0.9rem;
   }
+}
 
+@media screen and (max-width: 768px) {
   .summary {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 768px) {
   .summary {
     padding-left: 3rem;
     padding-right: 3rem;
