@@ -1,0 +1,29 @@
+.url-input {
+  font-size: 1.4rem;
+}
+
+@media screen and (max-width: 576px) {
+  .url-input {
+    font-size: 0.9rem;
+  }
+
+  .summary {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .summary {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.preview {
+  width: 296px;
+}
+
+.summary {
+  max-width: 660px;
+}
