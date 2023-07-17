@@ -1,6 +1,7 @@
 const searchInput = document.getElementById("search-input");
 const searchForm = document.getElementById("search-form");
 const preview = document.getElementById("preview");
+const summary = document.getElementById("summary");
 
 searchForm.onsubmit = (e) => {
   e.preventDefault();
@@ -16,4 +17,6 @@ searchForm.onsubmit = (e) => {
   `;
 
   preview.innerHTML = videoEmbed;
+
+  summary.style.visibility = "visible";
 };
