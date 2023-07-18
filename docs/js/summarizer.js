@@ -3,10 +3,12 @@ const searchForm = document.getElementById("search-form");
 const preview = document.getElementById("preview");
 const summary = document.getElementById("summary");
 const error = document.getElementById("error");
+const progressBar = document.getElementById("progress-bar");
+const progressFilled = document.getElementById("progress-filled");
 
 searchForm.onsubmit = (e) => {
   e.preventDefault();
-  error.style.visibility = "hidden";
+  hideError();
 
   let videoId;
   try {
@@ -23,6 +25,13 @@ searchForm.onsubmit = (e) => {
     return;
   }
 
+  showEmbed(videoId);
+  hideSummary();
+  resetProgressBar();
+  fakeProgress();
+};
+
+const showEmbed = (videoId) => {
   const videoEmbed = `
     <iframe class="preview" src="https://www.youtube.com/embed/${videoId}" title="YouTube video player"
       frameborder="0"
@@ -31,8 +40,37 @@ searchForm.onsubmit = (e) => {
   `;
 
   preview.innerHTML = videoEmbed;
+};
 
+const fakeProgress = () => {
+  let progress = 0;
+  const timer = setInterval(() => {
+    if (progress >= 100) {
+      clearInterval(timer);
+      progressBar.style.visibility = "hidden";
+      showSummary();
+    }
+
+    progress = progress + 35;
+    progressFilled.style.width = `${progress}%`;
+  }, 1000);
+};
+
+const hideSummary = () => {
+  summary.style.visibility = "hidden";
+};
+
+const showSummary = () => {
   summary.style.visibility = "visible";
+};
+
+const resetProgressBar = () => {
+  progressFilled.style.width = "0%";
+  progressBar.style.visibility = "visible";
+};
+
+const hideError = () => {
+  error.style.visibility = "hidden";
 };
 
 const showError = (errorMessage) => {
