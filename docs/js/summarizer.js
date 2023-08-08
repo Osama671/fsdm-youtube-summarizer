@@ -12,9 +12,7 @@ searchForm.onsubmit = (e) => {
 
   let videoId;
   try {
-    // expecting YouTube URL to have this format: https://www.youtube.com/watch?v={video_id}
-    const url = new URL(searchInput.value);
-    videoId = url.searchParams.get("v");
+    videoId = getVideoId(searchInput.value);
   } catch (e) {
     showError("Invalid YouTube URL format");
     return;
@@ -29,6 +27,22 @@ searchForm.onsubmit = (e) => {
   hideSummary();
   resetProgressBar();
   fakeProgress();
+};
+
+const getVideoId = (youtubeUrl) => {
+  // expecting YouTube URL in one of these formats: https://www.youtube.com/watch?v={video_id}, https://www.youtube.com/shorts/{video_id}, https://youtu.be/{video_id}
+  const url = new URL(youtubeUrl);
+
+  if (url.searchParams.get("v")) {
+    return url.searchParams.get("v");
+  }
+
+  if (url.pathname.includes("shorts") || url.hostname === "youtu.be") {
+    // video ID should be the last part of the URL path
+    return url.pathname.split("/").pop();
+  }
+
+  throw new Error("Invalid URL");
 };
 
 const showEmbed = (videoId) => {
