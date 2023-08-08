@@ -2,17 +2,21 @@ const searchInput = document.getElementById("search-input");
 const searchForm = document.getElementById("search-form");
 const preview = document.getElementById("preview");
 const summary = document.getElementById("summary");
+const summaryText = document.getElementById("summary-text");
 const error = document.getElementById("error");
 const progressBar = document.getElementById("progress-bar");
 const progressFilled = document.getElementById("progress-filled");
 
-searchForm.onsubmit = (e) => {
+const baseUrl = "http://174.138.38.99:8181";
+
+searchForm.onsubmit = async (e) => {
   e.preventDefault();
   hideError();
 
+  const url = searchInput.value;
   let videoId;
   try {
-    videoId = getVideoId(searchInput.value);
+    videoId = getVideoId(url);
   } catch (e) {
     showError("Invalid YouTube URL format");
     return;
@@ -25,8 +29,19 @@ searchForm.onsubmit = (e) => {
 
   showEmbed(videoId);
   hideSummary();
-  resetProgressBar();
-  fakeProgress();
+
+  try {
+    resetProgressBar();
+    startProgressBar();
+
+    const summary = await summarize(url);
+
+    showSummary(summary);
+  } catch (e) {
+    showError(e.toString());
+  } finally {
+    hideProgressBar();
+  }
 };
 
 const getVideoId = (youtubeUrl) => {
@@ -56,16 +71,26 @@ const showEmbed = (videoId) => {
   preview.innerHTML = videoEmbed;
 };
 
-const fakeProgress = () => {
+const summarize = async (url, wordLimit = 100) => {
+  const response = await fetch(
+    `${baseUrl}/val_summ?val_summ=${url}&val_size=${wordLimit}`
+  );
+
+  const content = await response.text();
+  // the backend returns this html tag for some reason. Strip it out
+  return content.replace(/^<pad> /, "");
+};
+
+const startProgressBar = () => {
   let progress = 0;
   const timer = setInterval(() => {
+    progress = progress + 5;
+
     if (progress >= 100) {
+      progress = 98;
       clearInterval(timer);
-      progressBar.style.visibility = "hidden";
-      showSummary();
     }
 
-    progress = progress + 35;
     progressFilled.style.width = `${progress}%`;
   }, 1000);
 };
@@ -74,13 +99,18 @@ const hideSummary = () => {
   summary.style.visibility = "hidden";
 };
 
-const showSummary = () => {
+const showSummary = (summaryContent) => {
+  summaryText.innerText = summaryContent;
   summary.style.visibility = "visible";
 };
 
 const resetProgressBar = () => {
   progressFilled.style.width = "0%";
   progressBar.style.visibility = "visible";
+};
+
+const hideProgressBar = () => {
+  progressBar.style.visibility = "hidden";
 };
 
 const hideError = () => {

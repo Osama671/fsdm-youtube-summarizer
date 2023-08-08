@@ -10,7 +10,10 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="css/summarizer.css" />
     <script defer src="js/summarizer.js"></script>
   </head>
@@ -19,17 +22,23 @@
     <div class="d-flex flex-column min-vh-100">
       <nav class="sticky-top nav-bar">
         <div class="container text-center">
-          <h1 class="fw-medium">YouTube <span class="text-danger">Summarizer</span></h1>
+          <h1 class="fw-medium">
+            YouTube <span class="text-danger">Summarizer</span>
+          </h1>
         </div>
         <ul class="nav nav-underline justify-content-center border">
           <li class="nav-item">
-            <a class="nav-link text-dark active" aria-current="page" href="#">Home</a>
+            <a class="nav-link text-dark active" aria-current="page" href="#"
+              >Home</a
+            >
           </li>
           <li class="nav-item">
             <a class="nav-link text-dark" href="./about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-dark" href="./contributors.html">Contributors</a>
+            <a class="nav-link text-dark" href="./contributors.html"
+              >Contributors</a
+            >
           </li>
           <li class="nav-item">
             <a class="nav-link text-dark" href="./settings.html">Settings</a>
@@ -47,32 +56,53 @@
                 placeholder="Paste a YouTube link to summarize!"
                 aria-describedby="search-button"
               />
-              <button class="input-group-text border-black bg-white" id="search">
+              <button
+                class="input-group-text border-black bg-white"
+                id="search"
+              >
                 <i class="bi bi-search" id="search-button"></i>
               </button>
             </div>
           </div>
         </form>
 
-        <p id="error" class="text-center mt-3 text-danger" style="visibility: hidden"></p>
+        <p
+          id="error"
+          class="text-center mt-3 text-danger"
+          style="visibility: hidden"
+        ></p>
 
         <div class="mt-5 row justify-content-center" id="preview"></div>
 
         <div class="row justify-content-center mt-5">
-          <div id="progress-bar" style="visibility: hidden" class="progress col-md-11 col-lg-8 col-11 p-0" role="progressbar">
-            <div id="progress-filled" class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width: 0%"></div>
+          <div
+            id="progress-bar"
+            style="visibility: hidden"
+            class="progress col-md-11 col-lg-8 col-11 p-0"
+            role="progressbar"
+          >
+            <div
+              id="progress-filled"
+              class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
+              style="width: 0%"
+            ></div>
           </div>
         </div>
 
         <div class="mt-4 d-flex justify-content-center">
           <div id="summary" style="visibility: hidden">
             <h3>Summary:</h3>
-            <p class="summary border border-black py-3 m-0">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus lorem, sagittis tincidunt placerat eu, ultrices eu nulla. Aenean
-              lacinia feugiat ante, ut condimentum nunc interdum id. Nunc volutpat volutpat pellentesque. Aliquam volutpat dignissim nunc, quis
-              consequat risus porta vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque eu felis et
-              ipsum bibendum consectetur in id erat. Quisque aliquet felis lacus, nec venenatis felis ornare vitae. Vivamus vel lectus vulputate,
-              auctor ante eu, fermentum dolor. Morbi eros enim, tempor vel arcu ac, convallis vulputate purus.
+            <p id="summary-text" class="summary border border-black py-3 m-0">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              purus lorem, sagittis tincidunt placerat eu, ultrices eu nulla.
+              Aenean lacinia feugiat ante, ut condimentum nunc interdum id. Nunc
+              volutpat volutpat pellentesque. Aliquam volutpat dignissim nunc,
+              quis consequat risus porta vel. Vestibulum ante ipsum primis in
+              faucibus orci luctus et ultrices posuere cubilia curae; Quisque eu
+              felis et ipsum bibendum consectetur in id erat. Quisque aliquet
+              felis lacus, nec venenatis felis ornare vitae. Vivamus vel lectus
+              vulputate, auctor ante eu, fermentum dolor. Morbi eros enim,
+              tempor vel arcu ac, convallis vulputate purus.
             </p>
           </div>
         </div>
@@ -83,16 +113,24 @@
           <hr />
           <div class="row row-cols-2 row-cols-md-4 g-2">
             <div class="col d-flex justify-content-center">
-              <a href="#" class="text-decoration-none text-secondary">Privacy Policy</a>
+              <a href="#" class="text-decoration-none text-secondary"
+                >Privacy Policy</a
+              >
             </div>
             <div class="d-flex justify-content-center">
               <a href="#" class="text-decoration-none text-secondary">FAQ</a>
             </div>
             <div class="col d-flex justify-content-center">
-              <a href="#" class="text-decoration-none text-secondary">Contact us</a>
+              <a href="#" class="text-decoration-none text-secondary"
+                >Contact us</a
+              >
             </div>
             <div class="col d-flex justify-content-center">
-              <a href="#" class="text-decoration-none text-secondary text-center">Terms and Conditions</a>
+              <a
+                href="#"
+                class="text-decoration-none text-secondary text-center"
+                >Terms and Conditions</a
+              >
             </div>
           </div>
         </div>
