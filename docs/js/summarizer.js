@@ -34,7 +34,7 @@ searchForm.onsubmit = async (e) => {
     resetProgressBar();
     startProgressBar();
 
-    const summary = await summarize(url);
+    const summary = await summarize(url, getWordLimit());
 
     showSummary(summary);
   } catch (e) {
@@ -79,6 +79,11 @@ const summarize = async (url, wordLimit = 100) => {
   const content = await response.text();
   // the backend returns this html tag for some reason. Strip it out
   return content.replace(/^<pad> /, "");
+};
+
+const getWordLimit = () => {
+  const limitString = localStorage.getItem("wordLimit") || "100";
+  return parseInt(limitString) || 100;
 };
 
 const startProgressBar = () => {
