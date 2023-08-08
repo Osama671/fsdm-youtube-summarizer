@@ -7,7 +7,7 @@ const error = document.getElementById("error");
 const progressBar = document.getElementById("progress-bar");
 const progressFilled = document.getElementById("progress-filled");
 
-const baseUrl = "http://174.138.38.99:8181";
+const baseUrl = "https://fsdm.mokshmodi.dev";
 
 searchForm.onsubmit = async (e) => {
   e.preventDefault();
