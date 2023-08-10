@@ -1,3 +1,3 @@
 # YouTube Summarizer
 
-Live site: https://georgevarghese185.github.io/fsdm-youtube-summarizer
+Live site: https://osama671.github.io/fsdm-youtube-summarizer/
