@@ -18,7 +18,7 @@ The Youtube Video Summarizer employs state-of-the-art natural language processin
 
 > Home Page ![Home](./Readme%20Assets/home.png)
 
-> About Page ![About](./Readme%20Assets/about.png)
+> About Page ![About](./Readme%20Assets/About.png)
 
 > Contributors Page ![Contributors](./Readme%20Assets/Contributors.png)
 
