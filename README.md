@@ -1,4 +1,5 @@
-![Logo](./Readme%20Assets/logo-dark.png#gh-dark-mode-only) ![Logo](./Readme%20Assets/logo-light.png#gh-light-mode-only) Frontend Web Development CSD 1103 – FSDM Group 2
+![Logo](./Readme%20Assets/logo-dark.png#gh-dark-mode-only) ![Logo](./Readme%20Assets/logo-light.png#gh-light-mode-only) 
+Frontend Web Development CSD 1103 – FSDM Group 2
 
 # What is it
 
