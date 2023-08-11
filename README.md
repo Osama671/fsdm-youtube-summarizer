@@ -2,6 +2,10 @@
 
 :sparkles: Frontend Web Development CSD 1103 – FSDM Group 2
 
+> ## Live site:
+>
+> https://osama671.github.io/fsdm-youtube-summarizer/
+
 # What is it?
 
 Youtube Summarizer is the perfect solution when you want to watch a video without really watching it. Simply enter a youtube URL of your choice, click the magnifying glass and now the video has been perfectly summarized, saving you a lot of time to do other productive things, like watching youtube videos. This project is a collaborative effort by the students of Lambton College in Ontario, Mississauga, combining work from both the front-end and the back-end team forming the ultimate "Full-Stack Team". The main goal of this project is to save your time from long videos by obtaining the main points and crucial details quickly rather than watching the boring videos to figure them out. This is especially useful if you can’t focus on a video for a long, extended period of time, credit due to the insidious platforms of Tiktok and Youtube(shorts).
@@ -22,6 +26,3 @@ The Youtube Video Summarizer employs state-of-the-art natural language processin
 
 > Contributors Page ![Contributors](./Readme%20Assets/Contributors.png)
 
-> ## Live site:
->
-> https://osama671.github.io/fsdm-youtube-summarizer/
