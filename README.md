@@ -1,4 +1,4 @@
-![Logo](../fsdm-youtube-summarizer/Readme%20Assets/logo-dark.png#gh-dark-mode-only) ![Logo](../fsdm-youtube-summarizer/Readme%20Assets/logo-light.png#gh-light-mode-only) Frontend Web Development CSD 1103 – FSDM Group 2
+![Logo](./Readme%20Assets/logo-dark.png#gh-dark-mode-only) ![Logo](./Readme%20Assets/logo-light.png#gh-light-mode-only) Frontend Web Development CSD 1103 – FSDM Group 2
 
 # What is it
 
@@ -16,6 +16,6 @@ The Youtube Video Summarizer employs state-of-the-art natural language processin
 >
 > > ### Home (Desktop View)
 > >
-> > ![Home-desktop](<../fsdm-youtube-summarizer/Readme%20Assets/Summarizer_(Home).png>)![Home-desktop](<../fsdm-youtube-summarizer/Readme%20Assets/Summarizer_(Home)_(Mobile).png>)
+> > ![Home-desktop](<./Readme%20Assets/Summarizer_(Home).png>)![Home-desktop](<./Readme%20Assets/Summarizer_(Home)_(Mobile).png>)
 
 > Live site: https://osama671.github.io/fsdm-youtube-summarizer/
