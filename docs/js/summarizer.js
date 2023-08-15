@@ -6,6 +6,7 @@ const summaryText = document.getElementById("summary-text");
 const error = document.getElementById("error");
 const progressBar = document.getElementById("progress-bar");
 const progressFilled = document.getElementById("progress-filled");
+let timer = 0;
 
 const baseUrl = "https://fsdm.mokshmodi.dev";
 
@@ -88,7 +89,7 @@ const getWordLimit = () => {
 
 const startProgressBar = () => {
   let progress = 0;
-  const timer = setInterval(() => {
+  timer = setInterval(() => {
     progress = progress + 5;
 
     if (progress >= 100) {
@@ -115,6 +116,7 @@ const resetProgressBar = () => {
 };
 
 const hideProgressBar = () => {
+  clearInterval(timer);
   progressBar.style.visibility = "hidden";
 };
 
